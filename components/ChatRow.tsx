@@ -6,7 +6,11 @@ import { Button } from "./ui/button";
 import { TrashIcon } from "lucide-react";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
-import TimeAgo from "timeago-react";
+import ReactTimeAgo from "react-time-ago";
+import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en.json";
+
+TimeAgo.addDefaultLocale(en);
 
 function ChatRow({
   chat,
@@ -49,7 +53,7 @@ function ChatRow({
 
         {lastMessage && lastMessage.createdAt && (
           <p className="text-xs text-gray-400 mt-1.5 font-medium">
-            <TimeAgo datetime={lastMessage.createdAt} />
+              <ReactTimeAgo date={new Date(lastMessage.createdAt)} locale="en-US" />
           </p>
         )} 
 
