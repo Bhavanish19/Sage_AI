@@ -5,24 +5,22 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import ChatInterface from '@/components/ChatInterface';
 
-interface ChatPageProps {
+interface PageProps {
   params: {
-    chatId: Id<"chats">;
+    chatId: string;  // Next.js route params are always strings
   };
 }
 
-async function ChatPage({ params }: ChatPageProps) {
-  // Ensure params is handled correctly
-  const chatId = params?.chatId;
-
-  // Get user authentication
+export default async function ChatPage({ params }: PageProps) {
   const { userId } = await auth();
-
   if (!userId) {
     redirect("/");
   }
 
   try {
+    // Convert string to Id<"chats"> type
+    const chatId = params.chatId as Id<"chats">;
+    
     const convex = getConvexClient();
     const initialMessages = await convex.query(api.messages.list, { chatId });
 
@@ -36,8 +34,6 @@ async function ChatPage({ params }: ChatPageProps) {
     redirect("/dashboard");
   }
 }
-
-export default ChatPage;
 
 
 
