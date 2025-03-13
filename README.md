@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Sage AI an AI Agent that Answers Question in Real-time 
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project an AI chat application built using Next.js 15, React 19, Convex, Clerk, and LangChain. The app leverages Anthropic Claude 3.5 for intelligent responses and integrates ConvexDB for real-time chat storage. It includes Anthropic, tool orchestration with IBM's wxflows, sophisticated AI state management using LangChain and LangGraph, and a modern real-time chat UI in Next.js 15. The application is deployed to Vercel with production-ready configurations and optimized token usage.
+
+## 🔥 Features
+
+### ✅ Authentication: Seamless authentication powered by Clerk.
+
+
+### ✅ Real-time Chat: Messages are streamed and stored efficiently using Convex.
+
+
+### ✅ AI Assistant: Integrated with LangChain & LangGraph and Anthropic Claude 3.5 for intelligent agent responses.
+
+
+### ✅ Modern UI: Built with ShadCN, Tailwind CSS, and Radix UI for a sleek and responsive interface.
+
+
+### ✅ Fast and Scalable: Utilizes Next.js App Router and Edge Functions for performance.
+
+
+### ✅ Advanced AI Tool Orchestration with LangChain & LangGraph
+
+
+### ✅ Deployment to Production with Vercel
+
+---
+
+## 📌 Installation & Setup
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (v18+)
+- **npm** or **yarn**
+- **Vercel CLI** (for deployment)
+- API keys for Anthropic, wxflows, Clerk, Convex, and LangChain
+
+### 1️⃣ Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-repo-name.git
+cd your-repo-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+# or
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ Set Up Environment Variables
 
-## Learn More
+Create a `.env.local` file and add the required API keys and configurations:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_ANTHROPIC_API_KEY=your_api_key
+NEXT_PUBLIC_WXFLOWS_API_KEY=your_api_key
+NEXT_PUBLIC_CLERK_API_KEY=your_api_key
+NEXT_PUBLIC_CONVEX_URL=your_database_url
+NEXT_PUBLIC_LC_API_KEY=your_langchain_api_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4️⃣ Run the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+yarn dev
+# or
+npm run dev
+```
 
-## Deploy on Vercel
+Access the application at `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment to Vercel
+
+### 1️⃣ Install Vercel CLI (if not installed)
+
+```bash
+npm install -g vercel
+```
+
+### 2️⃣ Deploy
+
+```bash
+vercel
+```
+
+Follow the prompts to configure your project.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 15, Tailwind CSS
+- **AI**: Claude 3.5 Sonnet, Anthropic
+- **Backend**: LangChain, LangGraph, wxflows
+- **Database**: Convex
+- **Authentication**: Clerk
+- **Deployment**: Vercel
+
+---
+
+## 🎯 Future Enhancements
+
+- **Fine-tuning AI behavior based on user preferences**
+
+---
+
+## 🎉 Contributing
+
+We welcome contributions! Feel free to **fork** the repo and submit a PR.
+
+---
+
+
+
+---
+
+🚀 Happy Building! ✨
+
