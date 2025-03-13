@@ -18,5 +18,5 @@ export default function ConvexClientProvider({ children }: { children: ReactNode
 }
 
 // Also export as named export for flexibility
-export { ConvexClientProvider };
+
 
