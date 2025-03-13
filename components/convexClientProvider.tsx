@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 
 const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
-export function ConvexClientProvider({ children }: { children: ReactNode }) {
+export default function ConvexClientProvider({ children }: { children: ReactNode }) {
   return (
     <ClerkProvider>
       <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
@@ -16,4 +16,7 @@ export function ConvexClientProvider({ children }: { children: ReactNode }) {
     </ClerkProvider>
   );
 }
+
+// Also export as named export for flexibility
+export { ConvexClientProvider };
 
